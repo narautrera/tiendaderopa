@@ -8,7 +8,7 @@
   <body>
 <h1>Tienda de ropa</h1>
 <button type="submit"> <a href="index.html">Inicio</a></button>
-<button type="submit"> <a href="listar.php">Listar Ropa</a></button>
+<button type="submit"> <a href="tabla.php">Tabla</a></button>
 <button type="submit"> <a href="buzo.php">Buzos</a> </button>
 <button type="submit"> <a href="mayor500.php">Precio > 500</a> </button>
 <br><br>
