@@ -8,26 +8,20 @@
   <body>
 <h1>Tienda de ropa</h1>
 <button type="submit"> <a href="index.html">Inicio</a></button>
-<button type="submit"> <a href="listar.php">Listar Ropa</a></button>
-<button type="submit"> <a href="buzo.php">Buzos</a> </button>
-<button type="submit"> <a href="mayor500.php">Precio > 500</a> </button>
-<br><br>
-<form action="buscar.php" method="post">
-  <label for="">Buscar por marca</label>
-  <input type="text" name="buscar" value="">
-</form>
-<br><br>
-
+<button type="submit"> <a href="listar.php">Volver</a></button>
+<br>
 <p>Las siguientes prendas se encuentran disponibles en stock</p>
 <br>
 
 <div class="container">
   <div class="row">
     <?php
+$buscar = $_POST ["buscar"];
+
 $conexion = mysqli_connect ("127.0.0.1", "root", "");
 mysqli_select_db($conexion, "tienda");
 
-$consulta = 'SELECT * FROM ropa';
+$consulta = "SELECT * FROM `ropa` WHERE `marca` = '$buscar'";
 
 $datos = mysqli_query ($conexion, $consulta);
 
